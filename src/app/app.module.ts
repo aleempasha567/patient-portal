@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
+import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PatientProfileComponent } from './patient-profile/patient-profile.compo
     LoginComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    PatientProfileComponent
+    PatientProfileComponent,
+    DoctorProfileComponent
   ],
   imports: [
     BrowserModule,
