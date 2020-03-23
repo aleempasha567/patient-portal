@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    PatientProfileComponent
   ],
   imports: [
     BrowserModule,
