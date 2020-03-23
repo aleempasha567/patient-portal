@@ -6,6 +6,9 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { DoctorProfileComponent } from './doctor-profile/doctor-profile.component';
+import { BookingComponent } from './booking/booking.component';
+import { CheckoutBookingComponent } from './checkout-booking/checkout-booking.component';
+import { BookingSuccessComponent } from './booking-success/booking-success.component';
 
 const routes: Routes = [
   {
@@ -31,6 +34,18 @@ const routes: Routes = [
   {
     path: 'doctor-profile',
     component: DoctorProfileComponent
+  },
+  {
+    path: 'booking',
+    component: BookingComponent
+  },
+  {
+    path: 'checkout-booking',
+    component: CheckoutBookingComponent
+  },
+  {
+    path: 'booking-success',
+    component: BookingSuccessComponent
   }
 ];
 
