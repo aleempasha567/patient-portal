@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { BookingComponent } from './booking/booking.component';
 import { CheckoutBookingComponent } from './checkout-booking/checkout-booking.component';
 import { BookingSuccessComponent } from './booking-success/booking-success.component';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { BookingSuccessComponent } from './booking-success/booking-success.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AutocompleteLibModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

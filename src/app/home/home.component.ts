@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DoctorsService } from '../doctors.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public placeholder: string = 'Find the Nearest Doctor with Name, Specialty , procedure ,...';
+  public keyword = 'specialty';
+  public historyHeading: string = 'Recently selected';
+
+  public doctersInfo = [];
+
+  constructor(private docService: DoctorsService) { }
 
   ngOnInit() {
+    this.docService.getEmployees().subscribe(data => {
+      if(data) {
+        this.doctersInfo = data;
+      }
+    })
   }
 
 }

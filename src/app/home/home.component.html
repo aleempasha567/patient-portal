@@ -16,9 +16,32 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                   <form class="subscribe_form" action="#" method="post">
-                    <input required="" value=""
-                      placeholder="Find the Nearest Doctor with Name, Specialty , procedure ,..." class="email"
-                      id="email" name="email" type="text">
+                    <ng-autocomplete
+                    :class="email"
+                #ngAutoCompleteStatic
+                [data]="doctersInfo"
+                name="specialty"
+                [initialValue]=""
+                [placeHolder]="placeholder"
+                [searchKeyword]="keyword"
+                historyIdentifier="countriesTemplateList"
+                [historyHeading]="historyHeading"
+                historyListMaxNumber="3"
+                notFoundText="Not found"
+                [itemTemplate]="itemTemplateStatic"
+                [notFoundTemplate]="notFoundTemplate"
+              >
+              </ng-autocomplete>
+              <ng-template #itemTemplateStatic let-item>
+                <a [innerHTML]="item.specialty"></a>
+              </ng-template>
+
+              <ng-template #notFoundTemplate let-notFound>
+                <div [innerHTML]="notFound"></div>
+              </ng-template>
+                    <!-- <input required="" value=""
+                      placeholder=""
+                      id="email" name="email" type="text"> -->
                     <input class="subscribe" name="email" value="Search" type="submit">
 
 
