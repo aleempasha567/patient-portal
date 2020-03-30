@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorProfileComponent implements OnInit {
 
+  public tab = 'doc_overview';
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }

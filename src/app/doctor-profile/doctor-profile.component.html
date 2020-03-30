@@ -79,26 +79,25 @@
           <nav class="user-tabs mb-4" style="    border: solid 2px #ddd;">
             <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
               <li class="nav-item">
-                <a class="nav-link " href="#doc_overview" data-toggle="tab">Overview</a>
+                <a class="nav-link" (click)="tab = 'doc_overview'" ng-init="tab='1'">Overview</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#doc_locations" data-toggle="tab">Locations</a>
+                <a class="nav-link" (click)="tab = 'doc_locations'">Locations</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#doc_reviews" data-toggle="tab">Reviews</a>
+                <a class="nav-link" (click)="tab = 'doc_reviews'">Reviews</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#doc_business_hours" data-toggle="tab">Business Hours</a>
+                <a class="nav-link" (click)="tab = 'doc_business_hours'">Business Hours</a>
               </li>
             </ul>
           </nav>
           <!-- /Tab Menu -->
-
           <!-- Tab Content -->
           <div class="tab-content pt-0">
 
             <!-- Overview Content -->
-            <div role="tabpanel" id="doc_overview" class="tab-pane active ">
+            <div role="tabpanel" id="doc_overview" class="tab-pane" [ngClass]="{'active':tab == 'doc_overview', 'fade': tab != 'doc_overview'}">
               <div class="row">
                 <div class="col-md-12 col-lg-9">
 
@@ -266,7 +265,7 @@
             <!-- /Overview Content -->
 
             <!-- Locations Content -->
-            <div role="tabpanel" id="doc_locations" class="tab-pane fade">
+            <div role="tabpanel" id="doc_locations" class="tab-pane" [ngClass]="{'active':tab == 'doc_locations', 'fade': tab != 'doc_locations'}">
 
               <!-- Location List -->
               <div class="location-list">
@@ -432,7 +431,7 @@
             <!-- /Locations Content -->
 
             <!-- Reviews Content -->
-            <div role="tabpanel" id="doc_reviews" class="tab-pane fade">
+            <div role="tabpanel" id="doc_reviews" class="tab-pane" [ngClass]="{'active':tab == 'doc_reviews', 'fade': tab != 'doc_reviews'}">
 
               <!-- Review Listing -->
               <div class="widget review-listing">
@@ -641,7 +640,7 @@
             <!-- /Reviews Content -->
 
             <!-- Business Hours Content -->
-            <div role="tabpanel" id="doc_business_hours" class="tab-pane fade">
+            <div role="tabpanel" id="doc_business_hours" class="tab-pane" [ngClass]="{'active':tab == 'doc_business_hours', 'fade': tab != 'doc_business_hours'}">
               <div class="row">
                 <div class="col-md-6 offset-md-3">
 
