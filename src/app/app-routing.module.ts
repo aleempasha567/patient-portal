@@ -10,6 +10,7 @@ import { BookingComponent } from './booking/booking.component';
 import { CheckoutBookingComponent } from './checkout-booking/checkout-booking.component';
 import { BookingSuccessComponent } from './booking-success/booking-success.component';
 import { HomeV1Component } from './home-v1/home-v1.component';
+import { DoctorsListComponent } from './doctors-list/doctors-list.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'home-new',
     component: HomeV1Component
+  },
+  {
+    path: 'doctors-list',
+    component: DoctorsListComponent
   }
 ];
 

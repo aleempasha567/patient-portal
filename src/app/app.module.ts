@@ -17,6 +17,7 @@ import { CheckoutBookingComponent } from './checkout-booking/checkout-booking.co
 import { BookingSuccessComponent } from './booking-success/booking-success.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { HomeV1Component } from './home-v1/home-v1.component';
+import { DoctorsListComponent } from './doctors-list/doctors-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomeV1Component } from './home-v1/home-v1.component';
     BookingComponent,
     CheckoutBookingComponent,
     BookingSuccessComponent,
-    HomeV1Component
+    HomeV1Component,
+    DoctorsListComponent
   ],
   imports: [
     BrowserModule,
