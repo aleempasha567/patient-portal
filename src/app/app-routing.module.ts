@@ -9,6 +9,7 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { BookingComponent } from './booking/booking.component';
 import { CheckoutBookingComponent } from './checkout-booking/checkout-booking.component';
 import { BookingSuccessComponent } from './booking-success/booking-success.component';
+import { HomeV1Component } from './home-v1/home-v1.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'booking-success',
     component: BookingSuccessComponent
+  },
+  {
+    path: 'home-new',
+    component: HomeV1Component
   }
 ];
 
