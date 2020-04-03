@@ -46,48 +46,19 @@
                   <!-- Day Slot -->
                   <div class="day-slot">
                     <ul>
-                      <li class="left-arrow">
-                        <a href="#">
+                      <li class="left-arrow" (click)="prevWeek()">
+                        <a href="javascript:void(0)">
                           <i class="fa fa-chevron-left"></i>
                         </a>
                       </li>
-                      <li>
-                        <span>Mon</span>
-                        <span class="slot-date">10 Feb <small class="slot-year">2020</small></span>
-                        <span class="slot-date" style="color: #01a400;">3 Slots Available</span>
+                      <li *ngFor="let data of dates">
+                        <span>{{data.weekDay}}</span>
+                        <span class="slot-date">{{data.shortDate}} <small class="slot-year">{{data.year}}</small></span>
+                        <span class="slot-date" style="color: #01a400;">{{data.slots}} Slots Available</span>
                       </li>
-                      <li>
-                        <span>Tue</span>
-                        <span class="slot-date">11 Feb <small class="slot-year">2020</small></span>
-                        <span class="slot-date" style="color: #01a400;">10 Slots Available</span>
-                      </li>
-                      <li>
-                        <span>Wed</span>
-                        <span class="slot-date">12 Feb <small class="slot-year">2020</small></span>
-                        <span class="slot-date" style="color: #01a400;">05 Slots Available</span>
-                      </li>
-                      <li>
-                        <span>Thu</span>
-                        <span class="slot-date">13 Feb <small class="slot-year">2020</small></span>
-                        <span class="slot-date" style="color: #01a400;">12 Slots Available</span>
-                      </li>
-                      <li>
-                        <span>Fri</span>
-                        <span class="slot-date">14 Feb <small class="slot-year">2020</small></span>
-                        <span class="slot-date" style="color: #01a400;">3 Slots Available</span>
-                      </li>
-                      <li>
-                        <span>Sat</span>
-                        <span class="slot-date">15 Feb <small class="slot-year">2020</small></span>
-                        <span class="slot-date" style="color: #01a400;">9 Slots Available</span>
-                      </li>
-                      <li>
-                        <span>Sun</span>
-                        <span class="slot-date">17 Feb <small class="slot-year">2020</small></span>
-                        <span class="slot-date" style="color: #01a400;">0 Slots Available</span>
-                      </li>
-                      <li class="right-arrow">
-                        <a href="#">
+
+                      <li class="right-arrow" (click)="nextWeek()">
+                        <a href="javascript:void(0)">
                           <i class="fa fa-chevron-right"></i>
                         </a>
                       </li>
@@ -248,7 +219,7 @@
                         </a>
                       </li>
                       <li>
-                        <!-- <a class="timing" href="#">
+                        <a class="timing" href="#">
                           <span>01:00</span> <span>PM</span>
                         </a>
                         <a class="timing" href="#">
@@ -275,7 +246,7 @@
                         </a>
                         <a class="timing" href="#">
                           <span>04:00</span> <span>PM</span>
-                        </a>-->
+                        </a>
                       </li>
 
                     </ul>
