@@ -39,10 +39,10 @@
                   </div>
                   <div class="row form-row social-login">
                     <div class="col-md-6">
-                      <a href="#" class="btn btn-facebook btn-block"><i class="fa fa-facebook-f mr-1"></i> Login</a>
+                      <a (click)="socialSignIn('facebook')" class="btn btn-facebook btn-block"><i class="fa fa-facebook-f mr-1"></i> Login</a>
                     </div>
                     <div class="col-md-6">
-                      <a href="#" class="btn btn-google btn-block"><i class="fa fa-google-plus mr-1"></i> Login</a>
+                      <a (click)="socialSignIn('google')" class="btn btn-google btn-block"><i class="fa fa-google-plus mr-1"></i> Login</a>
                     </div>
                   </div>
                   <div class="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>

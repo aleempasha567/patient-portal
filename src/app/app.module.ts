@@ -18,6 +18,24 @@ import { BookingSuccessComponent } from './booking-success/booking-success.compo
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { HomeV1Component } from './home-v1/home-v1.component';
 import { DoctorsListComponent } from './doctors-list/doctors-list.component';
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider} from 'angular-6-social-login';
+
+
+// Configs
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+  [
+    {
+      id: FacebookLoginProvider.PROVIDER_ID,
+      provider: new FacebookLoginProvider("Your-Facebook-app-id")
+    },
+    {
+      id: GoogleLoginProvider.PROVIDER_ID,
+      provider: new GoogleLoginProvider("779573446326-32or69flak6p7qk32csnibl36kc9optt.apps.googleusercontent.com")
+    }
+  ]);
+  return config;
+}
 
 @NgModule({
   declarations: [
@@ -40,9 +58,15 @@ import { DoctorsListComponent } from './doctors-list/doctors-list.component';
     BrowserModule,
     AppRoutingModule,
     AutocompleteLibModule,
-    HttpClientModule
+    HttpClientModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
