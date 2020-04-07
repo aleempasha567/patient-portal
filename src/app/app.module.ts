@@ -16,6 +16,7 @@ import { BookingComponent } from './booking/booking.component';
 import { CheckoutBookingComponent } from './checkout-booking/checkout-booking.component';
 import { BookingSuccessComponent } from './booking-success/booking-success.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeV1Component } from './home-v1/home-v1.component';
 import { DoctorsListComponent } from './doctors-list/doctors-list.component';
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider} from 'angular-6-social-login';
@@ -59,7 +60,8 @@ export function getAuthServiceConfigs() {
     AppRoutingModule,
     AutocompleteLibModule,
     HttpClientModule,
-    SocialLoginModule
+    SocialLoginModule,
+    NgbModule
   ],
   providers: [
     {
