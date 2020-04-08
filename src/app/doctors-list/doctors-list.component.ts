@@ -16,9 +16,11 @@ export class DoctorsListComponent implements OnInit {
   }
 
   open(content) {
-    alert(content);
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
+      if(result == 'Save') {
+        alert('You can save the content here and the dilogue will close automatically');
+      }
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
