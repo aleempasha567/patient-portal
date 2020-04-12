@@ -90,6 +90,9 @@
               <li class="nav-item">
                 <a class="nav-link" (click)="tab = 'doc_business_hours'">Business Hours</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="tab = 'doc_map_location'">Doctors Location</a>
+              </li>
             </ul>
           </nav>
           <!-- /Tab Menu -->
@@ -701,6 +704,20 @@
                     </div>
                   </div>
                   <!-- /Business Hours Widget -->
+
+                </div>
+              </div>
+            </div>
+            <!-- /Business Hours Content -->
+
+<!-- Business Hours Content -->
+            <div role="tabpanel" id="doc_map_location" class="tab-pane" [ngClass]="{'active':tab == 'doc_map_location', 'fade': tab != 'doc_map_location'}">
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+
+                  <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(location_url)' width="640" height="360" frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+    </iframe>
 
                 </div>
               </div>
