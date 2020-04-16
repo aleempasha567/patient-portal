@@ -16,6 +16,10 @@ export class HomeComponent implements OnInit {
 
   constructor(private docService: DoctorsService) { }
 
+  onChangeSearch(search: string) {
+    console.log(search);
+  }
+
   ngOnInit() {
     this.docService.getEmployees().subscribe(data => {
       if(data) {

@@ -29,11 +29,12 @@
                 historyListMaxNumber="3"
                 notFoundText="Not found"
                 [itemTemplate]="itemTemplateStatic"
+                (inputChanged)='onChangeSearch($event)'
                 [notFoundTemplate]="notFoundTemplate"
               >
               </ng-autocomplete>
               <ng-template #itemTemplateStatic let-item>
-                <a [innerHTML]="item.specialty"></a>
+                <a [innerHTML]="item.firstName"></a>
               </ng-template>
 
               <ng-template #notFoundTemplate let-notFound>
