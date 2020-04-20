@@ -20,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeV1Component } from './home-v1/home-v1.component';
 import { DoctorsListComponent } from './doctors-list/doctors-list.component';
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider} from 'angular-6-social-login';
+import { NgxTypeaheadModule } from 'ngx-typeahead';
 
 
 // Configs
@@ -61,7 +62,8 @@ export function getAuthServiceConfigs() {
     AutocompleteLibModule,
     HttpClientModule,
     SocialLoginModule,
-    NgbModule
+    NgbModule,
+    NgxTypeaheadModule
   ],
   providers: [
     {

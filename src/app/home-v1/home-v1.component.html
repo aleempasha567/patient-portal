@@ -12,8 +12,20 @@
 					<div id="call-to-action">
 						<div class="form-row">
 							<div class="form-group col-md-7">
-								<label for="input">Search by Name, Specialty, Procedure or condition</label>
-								<input type="text" class="form-control" id="input">
+                                <ng-template #myTemp let-item>
+                                    <div class="item-name">
+                                      {{item.result.name}}
+                                    </div>
+                                    <div class="item-desc">
+                                      {{item.result.description}}
+                                    </div>
+                                  </ng-template>
+                                <label for="input">Search by Name, Specialty, Procedure or condition</label>
+                                <input [value]="search2"
+        ngxTypeahead
+        [taList]="myLocalDataList"
+        [taItemTpl]="myTemp"
+        (taSelected)="selectedTempStatic($event)" class="form-control" id="input">
 							</div>
 							<div class="form-group col-md-3">
 								<label for="inputcity">
